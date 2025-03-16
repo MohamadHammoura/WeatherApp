@@ -33,7 +33,7 @@ This project was created for a **Software Engineering API Assignment** to demons
 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/yourusername/weatherapp.git
+git clone https://github.com/MohamadHammoura/WeatherApp.git
 cd weatherapp
 ```
 
