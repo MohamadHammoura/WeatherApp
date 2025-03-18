@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 
 public class WeatherService {
 
-    private final String apiKey = "8ELEKNJP76KWAQQS4JD7HY9GZ"; // Replace this with your real API key
+    private final String apiKey = "8ELEKNJP76KWAQQS4JD7HY9GZ"; // API Key
 
     public String getWeatherData(String location) {
         // Encode the location to handle spaces and special characters
