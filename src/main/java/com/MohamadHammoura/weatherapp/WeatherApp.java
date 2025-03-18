@@ -10,24 +10,24 @@ public class WeatherApp {
         WeatherParser weatherParser = new WeatherParser();
         WeatherAnalyzer weatherAnalyzer = new WeatherAnalyzer();
 
-        // Step 1: Get city from user
+        //  Get city from user
         System.out.print("Enter city name: ");
         String city = scanner.nextLine();
 
-        // Step 2: Fetch weather data
+        //  Fetch weather data
         String jsonData = weatherService.getWeatherData(city);
         if (jsonData != null) {
             List<DayForecast> forecasts = weatherParser.parseWeatherData(jsonData);
 
-            // Step 3: Display all forecasts
+            //  Display all forecasts
             System.out.println("\n--- Full Weather Forecast ---");
             forecasts.forEach(System.out::println);
 
-            // Step 4: Ask user for temperature threshold
+            //  Ask user for temperature threshold
             System.out.print("\nEnter a temperature threshold to filter hot days (°F): ");
             double threshold = scanner.nextDouble();
 
-            // Step 5: Filter and display hot days
+            //  Filter and display hot days
             List<DayForecast> hotDays = weatherAnalyzer.filterHotDays(forecasts, threshold);
             System.out.println("\n--- Days hotter than " + threshold + "°F ---");
             if (hotDays.isEmpty()) {
@@ -36,9 +36,9 @@ public class WeatherApp {
                 hotDays.forEach(System.out::println);
             }
 
-            // Step 6: Calculate and display average temperature
-            double avgTemp = weatherAnalyzer.calculateAverageTemperature(forecasts);
-            System.out.printf("\nAverage temperature over period: %.2f°C\n", avgTemp);
+            //  Calculate and display average temperature
+          //  double avgTemp = weatherAnalyzer.calculateAverageTemperature(forecasts);
+           // System.out.printf("\nAverage temperature over period: %.2f°F\n", avgTemp);
 
         } else {
             System.out.println("Failed to fetch weather data. Please check the city name or API key.");

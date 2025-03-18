@@ -21,7 +21,9 @@ public class WeatherParser {
 
             DayForecast forecast = new DayForecast();
             forecast.setDatetime(day.get("datetime").getAsString());
-            forecast.setTemp(day.get("temp").getAsDouble());
+            forecast.setTemp(day.get("temp").getAsDouble());      // Avg temp
+            forecast.setTempMax(day.get("tempmax").getAsDouble()); // High temp
+            forecast.setTempMin(day.get("tempmin").getAsDouble()); // Low temp
             forecast.setHumidity(day.get("humidity").getAsDouble());
 
             forecasts.add(forecast);
@@ -29,4 +31,5 @@ public class WeatherParser {
 
         return forecasts;
     }
+
 }

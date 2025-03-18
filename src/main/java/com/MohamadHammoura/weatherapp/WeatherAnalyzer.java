@@ -8,7 +8,7 @@ public class WeatherAnalyzer {
     // Method to filter hot days above a given threshold
     public List<DayForecast> filterHotDays(List<DayForecast> forecasts, double threshold) {
         return forecasts.stream()
-                .filter(day -> day.getTemp() > threshold)
+                .filter(day -> day.getTempMax() > threshold)
                 .collect(Collectors.toList());
     }
 
