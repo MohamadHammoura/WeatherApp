@@ -15,7 +15,7 @@ public class WeatherAnalyzer {
     // Method to calculate the average temperature
     public double calculateAverageTemperature(List<DayForecast> forecasts) {
         return forecasts.stream()
-                .mapToDouble(DayForecast::getTemp)
+                .mapToDouble(DayForecast::getTempMax)
                 .average()
                 .orElse(0.0); // Return 0.0 if the list is empty
     }

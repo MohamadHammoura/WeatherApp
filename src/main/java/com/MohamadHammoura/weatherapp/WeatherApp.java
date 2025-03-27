@@ -37,8 +37,8 @@ public class WeatherApp {
             }
 
             //  Calculate and display average temperature
-          //  double avgTemp = weatherAnalyzer.calculateAverageTemperature(forecasts);
-           // System.out.printf("\nAverage temperature over period: %.2f°F\n", avgTemp);
+           double avgTemp = weatherAnalyzer.calculateAverageTemperature(forecasts);
+            System.out.printf("\nAverage temperature over period: %.2f°F\n", avgTemp);
 
         } else {
             System.out.println("Failed to fetch weather data. Please check the city name or API key.");
